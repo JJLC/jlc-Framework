@@ -1,0 +1,11 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"jlcFW\\ApplicationFS\\" : "src"
+		}
+	},
+	"name" : "Jose Joao Leitao Correia/ApplicationFS",
+	"require" : {
+		"php" : ">=7.1"
+	}
+}

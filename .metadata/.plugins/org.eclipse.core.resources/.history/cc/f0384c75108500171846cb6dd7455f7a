@@ -1,0 +1,43 @@
+<?php
+
+namespace jlcFW\MVC;
+
+class Routes
+{
+	private $module;
+	private $controller;
+	private $action;
+	
+	public function __construct($module,$controller,$action)
+	{
+		$this->module = $module;
+		$this->controller = $controller;
+		$this->action = $action;
+		if (!in_array($this->module, $modules))
+			$this->controller = "";
+	}
+	
+	function call()
+	{
+		if ($this->controller == '')
+			require_once 'modules/Application/views/Application/index.phtml';
+			else
+			{
+				$arrayTemp = array();
+				$arrayTemp = explode("/", $this->controller);
+				switch ($arrayTemp[0])
+				{
+					case 'models'	: 	require_once 'modules/'.$this->module.'/'.$this->controller.'/'.$this->action.'.php';
+										break;
+					case 'reports'	: 	require_once 'reports/'.$this->action.'.php';
+										break;
+					case 'repFiles'	: 	require_once 'public/tempfiles/'.$this->action.'.pdf';
+										break;
+					default			: 	require_once 'modules/'.$this->module.'/views/'.$this->controller.'/'.$this->action.'.phtml';
+										break;
+				}
+			}
+	}
+	
+}
+?>

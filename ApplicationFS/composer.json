@@ -1,0 +1,11 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"jlcFW\\ApplicationFS\\" : "src"
+		}
+	},
+	"name" : "jlcFramework/ApplicationFS",
+	"require" : {
+		"php" : ">=5.3"
+	}
+}

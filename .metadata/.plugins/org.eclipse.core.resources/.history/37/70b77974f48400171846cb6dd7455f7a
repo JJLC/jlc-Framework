@@ -1,0 +1,24 @@
+<?php
+return [
+		'modules' => require __DIR__ . '/modules.config.php',
+		'module_paths' => [
+				'./modules',
+				'./vendor',
+		],
+		'db' => [
+				'driver'=> 'Pdo',
+				'dsn'	=> 'mysql:host=localhost;dbname=pesca',
+				'user'	=> 'root',
+				'pass'	=> '',
+		],
+		'home' => 'index.phtml',
+		'Company' => [
+				'name' => 'Família Correia',
+				'shortname' => 'Correias',
+				'cor1' => '#1a325d',
+				'cor2' => '#f1a02f',
+		],
+		'keys' => [
+				'weather' => '613a08b82885401b9d274850171008',
+		],
+];

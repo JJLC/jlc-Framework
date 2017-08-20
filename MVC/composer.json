@@ -1,0 +1,11 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"jlcFW\\MVC\\" : "src"
+		}
+	},
+	"name" : "jlcFramework/MVC",
+	"require" : {
+		"php" : ">=5.3"
+	}
+}

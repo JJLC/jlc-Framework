@@ -1,0 +1,24 @@
+<?php
+return [
+		'modules' => require __DIR__ . '/modules.config.php',
+		'module_paths' => [
+				'./modules',
+				'./vendor',
+		],
+		'db' => [
+				'driver'=> '',
+				'dsn'	=> '',
+				'user'	=> '',
+				'pass'	=> '',
+		],
+		'home' => 'index.phtml',
+		'Company' => [
+				'name' => 'Família Correia',
+				'shortname' => 'Correias',
+				'cor1' => '#1a325d',
+				'cor2' => '#f1a02f',
+		],
+		'keys' => [
+				
+		],
+];
